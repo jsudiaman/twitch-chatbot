@@ -4,7 +4,7 @@ import { promises as fs } from "fs";
 import { Bot, createBotCommand } from "@twurple/easy-bot";
 
 import tokenData from "./tokens.json" assert { type: "json" };
-import reverse from "./commands/reverse.mjs";
+import ai from "./commands/ai.mjs";
 
 // Authenticate.
 const authProvider = new RefreshingAuthProvider({
@@ -28,6 +28,6 @@ console.log("Authentication successful. 🔑");
 const bot = new Bot({
   authProvider,
   channels: [process.env.USERNAME],
-  commands: [createBotCommand("reverse", reverse)],
+  commands: [createBotCommand("ai", ai)],
 });
 console.log("Bot is up and running. 🤖");

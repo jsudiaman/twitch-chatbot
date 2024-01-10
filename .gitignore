@@ -2,6 +2,9 @@
 /.env
 /tokens.json
 
+# llamafile
+*.llamafile
+
 # Logs
 logs
 *.log
